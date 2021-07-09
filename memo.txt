@@ -1,0 +1,13 @@
+docker build -f Dockerfile.dev .
+
+docker run -it -p 3000:3000 72eac6c142a6
+
+docker-compose up --build
+
+docker-compose ps
+
+
+■nginxあり
+docker build .
+
+docker run -p 8080:80 6e29e5ff3a89

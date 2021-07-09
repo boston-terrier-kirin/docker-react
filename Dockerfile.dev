@@ -1,0 +1,12 @@
+FROM node:14-alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+
+RUN yarn install
+
+# docker-composeでvolumeを使ってローカルを見るようにしているので、ここでコピーする必要はあまりない。
+COPY . .
+
+CMD ["yarn", "start"]
